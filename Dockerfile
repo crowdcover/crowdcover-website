@@ -36,7 +36,7 @@ RUN mkdir -p public && mkdir -p temp/logs
 
 VOLUME ["/app/logs"]
 
-EXPOSE 4000
+EXPOSE 4003
 ENV NODE_ENV production
 
 ENV DEBUG *,-express:*,-babel,-oauth2orize,-morgan,-express-session,-tessera,-body-parser:*,-compression,-pool2,-knex:*,-pm2:*
