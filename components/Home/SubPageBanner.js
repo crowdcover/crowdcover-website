@@ -30,7 +30,7 @@ render(){
             position: 'absolute',
             width: '100%',
             height: '250px',
-            backgroundColor: 'rgba(0,0,0,0.55)'
+            backgroundColor: 'rgba(0,0,0,0.3)'
           }}>
           <div className="container valign">
             <h4 lang={this.props.locale} style={{color: 'rgba(255,255,255,0.9)'}}>{this.props.title}</h4>
