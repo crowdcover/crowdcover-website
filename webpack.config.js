@@ -1,0 +1,91 @@
+var webpack = require('webpack');
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
+var local = require('./local');
+require('babel-polyfill');
+
+module.exports = {
+  devtool: 'eval',
+  entry: {
+    home: "./client/home",
+    error: "./client/error",
+    vendor: ["./materialize.config.scss", "jquery", "react", "react-dom", "materialize-css", "reflux", "reflux-state-mixin", "debug", "superagent", "classnames", "intl"],
+    locales: ["./services/locales"],
+    clientconfig: ["./clientconfig"]
+  },
+
+  resolve: {
+    modulesDirectories: ['node_modules'],
+
+    extensions: ['', '.js', '.jsx', '.json']
+  },
+
+  output: {
+    path: local.publicFilePath,
+    publicPath: '/public/',
+    filename: "[name].js"
+  },
+
+  node: {
+    fs: "empty",
+    i18n: 'empty',
+    net: "empty",
+    tls: "empty"
+  },
+
+  module: {
+    loaders: [
+      {
+        test: /\.json$/,
+        loader: 'json'
+      },{
+        test: /\.(glsl|vert|frag)([\?]?.*)$/,
+        loader: 'raw'
+      },{
+      test: /\.jsx?$/,
+      loader: 'babel-loader',
+
+      include: [/i18n\.js/, /locales/, /views/, /components/, /stores/, /actions/, /services/, /client/, /react-slick/, /reflux-state-mixin/],
+      query: {
+        presets: [
+          "es2015",
+          "react",
+          "stage-0"
+        ],
+        plugins: ['transform-flow-strip-types']
+      }
+    },
+
+      {test: /\.(scss|css)$/, loader: ExtractTextPlugin.extract('style-loader', "css!resolve-url!sass")},
+
+      {test: /\.(woff|svg|ttf|eot|gif)([\?]?.*)$/, loader: "file-loader?name=[name].[ext]"}
+
+    ],
+    noParse: [
+      '/node_modules\/json-schema\/lib\/validate\.js/' //https://github.com/request/request/issues/1920
+    ]
+  },
+  plugins: [
+    new webpack.ProvidePlugin({
+          $: "jquery",
+       jQuery: "jquery",
+       "window.jQuery": "jquery",
+       Materialize: "materialize-css",
+       "window.Materialize": "materialize-css"
+    }),
+    new webpack.optimize.CommonsChunkPlugin({
+           names: ["clientconfig", "locales", "vendor"],
+                       minChunks: Infinity
+   }),
+   new ExtractTextPlugin("[name].css"),
+   new webpack.IgnorePlugin(/^(i18n|winston|winston-loggly)$/),
+   new webpack.DefinePlugin({
+    'process.env': {
+        APP_ENV: JSON.stringify('browser')
+    }
+})
+  ],
+
+  externals: {
+    'unicode/category/So': '{}'
+}
+};
