@@ -213,7 +213,6 @@ function createEngine(engineOptions) {
                 window.HSCW=o,window.HS=n,n.beacon=n.beacon||{};
                 var t=n.beacon;
                 t.userConfig={icon: 'question', color: '#29ABE2', topArticles: false,
-                  topics: [{val: 'question', label: '` + t('Question') + `'},{val: 'suggestion', label: '` + t('Suggestion') + `'},{val: 'problem', label: '` + t('Report a Problem') + `'}],
                   translation: ` + beaconTranslationText +`,
                 },
                 t.readyQueue=[],t.config=function(e){this.userConfig=e},t.ready=function(e){this.readyQueue.push(e)},o.config={docs:{enabled:false,baseUrl:"//maphubs.helpscoutdocs.com/"},contact:{enabled:!0,formId:"8e51c6ca-42f8-11e6-aae8-0a7d6919297d"}};

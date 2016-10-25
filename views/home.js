@@ -30,7 +30,7 @@ var CrowdCover = React.createClass({
             <SubPageBanner locale={this.props.locale}
               img="/assets/home/MapHubs-Map.jpg"
                title={this.__('CrowdCover')}
-               subTitle={'CrowdCover LLC is a Washington D.C. based tech company providing consulting services and support for the open-source MapHubs software'} />
+               subTitle={'CrowdCover LLC is a Washington D.C. based tech company providing consulting services and support for the open-source MapHubs software and OpenStreetMap applications'} />
           <main className="container">
 
             <div className="row" style={{marginTop: '30px'}}>
