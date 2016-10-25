@@ -46,8 +46,15 @@ var CrowdCover = React.createClass({
                     <div className="col s12 m7 l7">
                       <a href="http://maphubs.com" target="_blank"><h5>MapHubs</h5></a>
                       <p lang="en" style={{fontSize: '18px', marginTop: 0}}>
-                        MapHubs is software for making beautiful maps for your website and social media. It’s designed to be simple to use and requires no knowledge of GIS or coding to make custom maps using your data or third party data.
-                      </p>
+                        MapHubs is software for making beautiful maps for your website and social media. It’s designed to be simple to use and requires no knowledge of GIS or coding to make custom maps using your data or third party data. MapHubs is currently being used by Map for Environment to make the global map of the environment.
+                     </p>
+                     <p lang="en" style={{fontSize: '18px', marginTop: 0}}>
+                       Our role: Conceived, designed, and built software
+                     </p>
+                     <p lang="en" style={{fontSize: '18px', marginTop: 0}}>
+                       Client: <a href="https://mapforenvironment.org">Map for Environment</a>
+                    </p>
+
                     </div>
 
                   </div>
@@ -57,8 +64,16 @@ var CrowdCover = React.createClass({
                     <a href="http://rdc.moabi.org" target="_blank"><h5>Moabi DRC</h5></a>
 
                     <p lang="en" style={{fontSize: '18px', marginTop: 0}}>
-                      Moabi DRC is an independent initiative that collaboratively monitors natural resource use in the Democratic Republic of the Congo. Our community works toward a more transparent, equitable, and sustainable future for the people and environment of DRC.
+                      Moabi DRC is an independent initiative that collaboratively monitors natural resource use in the Democratic Republic of the Congo.
+                      Our community works toward a more transparent, equitable, and sustainable future for the people and environment of DRC.
                     </p>
+                    <p lang="en" style={{fontSize: '18px', marginTop: 0}}>
+                      Our role: Built the Moabi DRC platform using OpenStreetMap, designed civil society training program, and supervised field operations for the Moabi project
+                    </p>
+                    <p lang="en" style={{fontSize: '18px', marginTop: 0}}>
+                      Client: <a href="http://www.iiasa.ac.at/">International Institute for Applied System Analysis</a>
+                    </p>
+
                   </div>
                   <div className="col s12 m5 l5">
                     <a href="http://rdc.moabi.org" target="_blank">
@@ -76,7 +91,15 @@ var CrowdCover = React.createClass({
                   <div className="col s12 m7 l7">
                     <a href="http://loggingroads.org" target="_blank"><h5>Logging Roads</h5></a>
                     <p lang="en" style={{fontSize: '18px', marginTop: 0}}>
-                      Using OpenStreetMap to monitor logging roads in the Congo basin.
+                      Logging Roads is a collaborative mapping initiative implemented in partnership with <a href="http://www.globalforestwatch.org/">Global Forest Watch</a>, which aims to build a map and date all the logging roads in the Congo Basin.
+                      Logging Roads won the <a href="http://www.eoesummit.org/challenges/data-innovation/winners/">2015 Eye on Earth Citizen Science Award</a>.
+                      So far the platform has contributed over 30,000 roads to OSM with 12,000+ edits.
+                    </p>
+                    <p lang="en" style={{fontSize: '18px', marginTop: 0}}>
+                      Our role: Designed and built Logging Roads website, coordinate bulk upload of road data to OSM, and organized mapathons in DRC and North America
+                    </p>
+                    <p lang="en" style={{fontSize: '18px', marginTop: 0}}>
+                      Client: <a href="http://www.wri.org/">World Resources Institute</a>
                     </p>
                   </div>
 
@@ -86,7 +109,14 @@ var CrowdCover = React.createClass({
                   <div className="col s12 m7 l7">
                     <a href="http://congomines.org" target="_blank"><h5>Congo Mines</h5></a>
                     <p lang="en" style={{fontSize: '18px', marginTop: 0}}>
-                      A Carter Center project using Moabi technology to document mining operations and contracts in DRC.
+                      Congo Mines is a documentation center on the mining sector in the Democratic Republic of the Congo . It was developed by the Office of the Carter Center in Katanga as part of its Mining Governance Program.
+                      It aims to facilitate access to information that is often scattered and difficult to find.
+                    </p>
+                    <p lang="en" style={{fontSize: '18px', marginTop: 0}}>
+                      Our role: Designed and built the updated Congo Mines website, conducted training in DRC for Carter Center field staff and partners, and provide regular maintenance and updates to the site
+                    </p>
+                    <p lang="en" style={{fontSize: '18px', marginTop: 0}}>
+                      Client: <a href="https://www.cartercenter.org">Carter Center</a>
                     </p>
                   </div>
                   <div className="col s12 m5 l5">
